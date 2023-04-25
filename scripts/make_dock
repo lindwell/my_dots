@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# call like this:
+#     /path/to/this/script.sh <window_id> <dock height>
+
+win="${1:-}"
+height="${2:-}"
+width=$(xrandr -q | head -n1 | awk '{print $8}')
+
+xdotool windowunmap --sync ${win}
+xdotool windowsize --sync ${win} ${width} ${height}
+xprop -id "${win}" -format _NET_WM_WINDOW_TYPE 32a -set _NET_WM_WINDOW_TYPE "_NET_WM_WINDOW_TYPE_DOCK"
+xprop -id "${win}" -format _NET_WM_STRUT_PARTIAL 32cccccccccccc -set _NET_WM_STRUT_PARTIAL "0,0,${height},0,0,0,0,0,0,${width},0,0"
+xdotool windowmap ${win}

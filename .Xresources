@@ -1,0 +1,76 @@
+
+
+!--------------------xdefauls
+!urxvt*font: xft:trigon:pixelsize=15:antialias=true, xft:Unifont:pixelsize=17:antialias=true:hinting=full, xft:Symbola:pixelsize=17:antialias=true:hinting=full, xft:Kochi Gothic:antialias=false
+!URxvt*font: xft:Ubuntuu-L:pixelsize=15
+URxvt.font: xft:monaco:pixelsize=13,xft:FiraCode Nerd Font Mono:size=14
+urxvt*termName: rxvt
+urxvt*matcher.button: 1
+urxvt.transparent: false
+urxvt.boldFont:
+Xft*dpi: 96
+Xft*antialias: true
+Xft*hinting: true
+Xft*hintstyle: hintfull
+Xft*rgba: rgb
+URxvt*geometry: 85x40
+*internalBorder: 40
+URxvt*fading: 0
+URxvt*tintColor: #ffffff
+URxvt*shading: 0
+URxvt*inheritPixmap: False
+
+URxvt.scrollBar: false
+
+! Restore Ctrl+Shift+(c|v)
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+
+urxvt.perl-ext-common: default,tabbed,matcher,resize-font,-tabbed
+
+URxvt.keysym.C-minus:     resize-font:smaller
+URxvt.keysym.C-plus:      resize-font:bigger
+URxvt.keysym.C-equal:     resize-font:reset
+URxvt.keysym.C-question:  resize-font:show
+
+! special
+*.foreground:   #cab0a1
+*.background:   #333232
+*.cursorColor:  #cab0a1
+
+! black
+*.color0:       #585c69
+*.color8:       #585c69
+
+! red
+*.color1:       #dd7878
+*.color9:       #dd7878
+
+! green
+*.color2:       #9f8578
+*.color10:      #9f8578
+
+! yellow
+*.color3:       #986c5b
+*.color11:      #986c5b
+
+! blue
+*.color4:       #808178
+*.color12:      #808178
+
+! magenta
+*.color5:       #979892
+*.color13:      #979892
+
+! cyan
+*.color6:       #ea999c
+*.color14:      #ea999c
+
+! white
+*.color7:       #707880
+*.color15:      #707880
+
+
