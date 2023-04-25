@@ -1,0 +1,40 @@
+#!/bin/sh
+
+workspaces() {
+
+ws1=0
+ws2=1
+ws3=2
+ws4=3
+ws5=4
+ws6=5
+
+# Unoccupied
+un="0"
+
+# check if Occupied
+o1=$(./workspaceBackgroundScripts/workSpace1Background.sh)
+o2=$(./workspaceBackgroundScripts/workSpace2Background.sh)
+o3=$(./workspaceBackgroundScripts/workSpace3Background.sh)
+o4=$(./workspaceBackgroundScripts/workSpace4Background.sh)
+o5=$(./workspaceBackgroundScripts/workSpace5Background.sh)
+o6=$(./workspaceBackgroundScripts/workSpace6Background.sh)
+
+# check if Focused
+f1=$(./workspaceBackgroundScripts/workSpace1Background.sh)
+f2=$(./workspaceBackgroundScripts/workSpace2Background.sh)
+f3=$(./workspaceBackgroundScripts/workSpace3Background.sh)
+f4=$(./workspaceBackgroundScripts/workSpace4Background.sh)
+f5=$(./workspaceBackgroundScripts/workSpace5Background.sh)
+f6=$(./workspaceBackgroundScripts/workSpace6Background.sh)
+
+echo 	"(box	:class \"works\" :orientation \"v\"	:halign \"center\"	:valign \"start\"	 :space-evenly \"false\" :spacing \"-5\" (button :onclick \"wmctrl -s $ws1\"	:class	\"$un$o1$f1\"	\"\") (button :onclick \"wmctrl -s $ws2\"	:class \"$un$o2$f2\"	 \"\") (button :onclick \"wmctrl -s $ws3\"	:class \"$un$o3$f3\" \"󰙯\") (button :onclick \"wmctrl -s $ws4\"	:class \"$un$o4$f4\"	\"\") (button :onclick \"wmctrl -s $ws5\"	:class \"$un$o5$f5\" \"\" )  (button :onclick \"wmctrl -s $ws6\"	:class \"$un$o6$f6\" \"\"))"
+
+}
+
+workspaces
+bspc subscribe desktop node_transfer | while read -r _ ; do
+workspaces
+done
+
+

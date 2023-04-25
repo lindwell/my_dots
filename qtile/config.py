@@ -410,7 +410,7 @@ top=bar.Bar(
                 widget.TaskList(
                     icon_size = 0,
                     font = "JetBrainsMono Nerd Font",
-                    foreground = colors[1],
+                    foreground = colors[2],
                     background = colors[14],
                     borderwidth = 0,
                     border = colors[1],
