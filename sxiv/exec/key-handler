@@ -1,0 +1,13 @@
+#!/bin/sh
+
+
+
+while read file
+do
+	case "$1" in
+		"w") feh --bg-fill $file ;;
+		"l") feh --bg-center --image-bg "#e5ceae" $file ;;
+		"p") feh --bg-center --image-bg "#c39b9b" $file ;;
+		"r") convert $file -resize 750x901 $file ;;
+	esac 
+done

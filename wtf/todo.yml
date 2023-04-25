@@ -1,0 +1,25 @@
+items:
+- checked: false
+  checkedicon: X
+  date: null
+  tags: []
+  text: korean day 1,2
+  uncheckedicon: ' '
+- checked: false
+  checkedicon: X
+  date: null
+  tags: []
+  text: chemistry homework half
+  uncheckedicon: ' '
+- checked: false
+  checkedicon: X
+  date: null
+  tags: []
+  text: physics day 1
+  uncheckedicon: ' '
+- checked: true
+  checkedicon: X
+  date: null
+  tags: []
+  text: opencv face detection
+  uncheckedicon: ' '
